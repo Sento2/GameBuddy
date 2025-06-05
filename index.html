@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GameBuddy - Beranda</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(120deg, #18122B 0%, #232D3F 100%);
+      color: #F5F5F5;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+
+    header {
+      background: rgba(57, 48, 83, 0.95);
+      box-shadow: 0 2px 12px rgba(0,255,202,0.05);
+      padding: 28px 0 18px 0;
+      text-align: center;
+      border-bottom: 2px solid #00FFCA;
+    }
+
+    header h1 {
+      font-size: 2.2em;
+      letter-spacing: 2px;
+      color: #00FFCA;
+      margin: 0 0 10px 0;
+      text-shadow: 0 0 12px #00FFCA33;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 18px;
+      color: #F5F5F5;
+      background: #635985;
+      padding: 7px 18px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1em;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 8px #18122B33;
+      border: 2px solid transparent;
+    }
+
+    nav a:hover, nav a.active {
+      background: #00FFCA;
+      color: #18122B;
+      border: 2px solid #635985;
+      box-shadow: 0 0 12px #00FFCA99;
+    }
+
+    main {
+      padding: 32px 10px 32px 10px;
+      max-width: 800px;
+      margin: 40px auto 0 auto;
+    }
+
+    .game-section {
+      background: rgba(57, 48, 83, 0.96);
+      margin-bottom: 28px;
+      padding: 22px 24px;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px #18122B44;
+      border-left: 5px solid #00FFCA;
+      transition: box-shadow 0.2s;
+    }
+
+    .game-section:hover {
+      box-shadow: 0 8px 32px #00FFCA33;
+    }
+
+    .game-section h2, .game-section h3 {
+      color: #00FFCA;
+      text-shadow: 0 0 8px #00FFCA44;
+      margin-top: 0;
+    }
+
+    ul, ol {
+      margin-left: 22px;
+      margin-bottom: 0;
+    }
+
+    strong {
+      color: #635985;
+    }
+
+    footer {
+      background: rgba(57, 48, 83, 0.95);
+      text-align: center;
+      padding: 18px 0 12px 0;
+      color: #F5F5F5;
+      border-top: 2px solid #00FFCA;
+      margin-top: 40px;
+      font-size: 1em;
+      letter-spacing: 1px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      main {
+        padding: 16px 2vw;
+        margin: 20px auto 0 auto;
+      }
+      .game-section {
+        padding: 14px 8px;
+        border-radius: 10px;
+      }
+      nav a {
+        margin: 0 6px;
+        padding: 6px 10px;
+        font-size: 0.95em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎮 GameBuddy</h1>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="panduan.html">Panduan Dasar</a>
+      <a href="tips.html">Tips & Trik</a>
+      <a href="login.html">Login Pengguna</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="game-section">
+      <h2>Selamat Datang di GameBuddy!</h2>
+      <p>Platform hiburan untuk kamu yang ingin belajar dan menjadi jago dalam berbagai game populer seperti Mobile Legends, Clash of Clans, GTA, God of War, dan Delta Force.</p>
+    </section>
+
+    <section class="game-section">
+      <h3>🕹 Daftar Game Populer</h3>
+      <ul>
+        <li>
+          <strong>Mobile Legends:</strong> MOBA 5v5 dengan berbagai hero unik dan gameplay kompetitif.
+        </li>
+        <li>
+          <strong>Clash of Clans:</strong> Game strategi membangun desa, melatih pasukan, dan bertempur antar klan.
+        </li>
+        <li>
+          <strong>GTA (Grand Theft Auto):</strong> Game aksi petualangan dunia terbuka dengan misi seru dan kebebasan eksplorasi.
+        </li>
+        <li>
+          <strong>God of War:</strong> Game aksi-petualangan bertema mitologi dengan pertarungan epik dan cerita mendalam.
+        </li>
+        <li>
+          <strong>Delta Force:</strong> Game first-person shooter klasik dengan misi militer dan strategi tempur.
+        </li>
+      </ul>
+    </section>
+
+    <section class="game-section">
+      <h3>🔥 Mengapa GameBuddy?</h3>
+      <ul>
+        <li>Panduan pemula untuk semua game populer</li>
+        <li>Tips dan trik rahasia dari pro player</li>
+        <li>Konten visual menarik dan mudah dipahami</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GameBuddy - Website Hiburan & Panduan Game</p>
+  </footer>
+</body>
+</html>

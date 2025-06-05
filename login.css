@@ -1,0 +1,157 @@
+ 
+body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(120deg, #18122B 0%, #232D3F 100%);
+      color: #F5F5F5;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+     header {
+      background: rgba(57, 48, 83, 0.95);
+      box-shadow: 0 2px 12px rgba(0,255,202,0.05);
+      padding: 28px 0 18px 0;
+      text-align: center;
+      border-bottom: 2px solid #00FFCA;
+    }
+    header h1 {
+      font-size: 2.2em;
+      letter-spacing: 2px;
+      color: #00FFCA;
+      margin: 0 0 10px 0;
+      text-shadow: 0 0 12px #00FFCA33;
+    }
+ 
+    main {
+      display: block;
+      max-width: 800px;
+      margin: 40px auto 0 auto;
+    }
+ form{
+      background-color: #1e213f;
+      border: 2px solid #00f5d4;
+      border-radius: 14px;
+      padding: 30px;
+      margin-top: 40px;
+      width: 90%;
+      max-width: 450px;
+      box-shadow: 0 8px 20px rgba(0, 245, 212, 0.2);
+      animation: fadeIn 1s;
+
+    }
+    .login-container {
+      max-width: 380px;
+      margin: 48px auto;
+      background: rgba(57, 48, 83, 0.98);
+      border-radius: 18px;
+      box-shadow: 0 6px 32px #18122B66;
+      padding: 32px 28px 24px 28px;
+      border-left: 5px solid #00FFCA;
+      animation: fadeIn 1s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .login-container h1 {
+      color: #00FFCA;
+      text-align: center;
+      margin-bottom: 24px;
+      letter-spacing: 2px;
+      text-shadow: 0 0 12px #00FFCA33;
+    }
+    .login-container label {
+      display: block;
+      margin-bottom: 7px;
+      margin-top: 14px;
+      color: #F5F5F5;
+      font-weight: 500;
+    }
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: none;
+      background: #23203A;
+      color: #F5F5F5;
+      margin-bottom: 10px;
+      font-size: 1em;
+      outline: none;
+      transition: box-shadow 0.2s;
+      box-shadow: 0 2px 8px #18122B22;
+    }
+    .login-container input[type="text"]:focus,
+    .login-container input[type="password"]:focus {
+      box-shadow: 0 0 0 2px #00FFCA99;
+    }
+    .minat-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px 12px;
+      margin: 18px 0 10px 0;
+      padding: 10px 0 0 0;
+      border-top: 1px solid #63598544;
+    }
+    .minat-section label {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      display: inline-block;
+      margin-right: 12px;
+      margin-bottom: 6px;
+      color: #00FFCA;
+      font-weight: 400;
+      font-size: 0.98em;
+    }
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(90deg, #00FFCA 60%, #635985 100%);
+      color: #18122B;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 18px;
+      box-shadow: 0 2px 12px #00FFCA33;
+      transition: background 0.2s, color 0.2s;
+    }
+    .login-container button:hover {
+      background: linear-gradient(90deg, #635985 0%, #00FFCA 100%);
+      color: #F5F5F5;
+    }
+    button{
+      padding: 5px 10px;
+      background-color: #00FFCA99;
+      color: #fcfcfc;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    button:hover {
+      background-color: #635985;
+      text-decoration: underline;
+      transform: scale(1.05);
+    }
+    .kembali {
+      display: block;
+      text-align: center;
+      margin-top: 22px;
+      color: #00FFCA;
+      text-decoration: none;
+      font-size: 1em;
+      transition: color 0.2s;
+      animation: fadeIn 1s;
+    }
+    .kembali:hover {
+      color: #635985;
+      text-decoration: underline;
+    }
+    @media (max-width: 500px) {
+      .login-container {
+        padding: 18px 6vw 18px 6vw;
+      }
+    }
