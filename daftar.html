@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar | GameBuddy</title>
+    <link rel="stylesheet" href="daftar.css">
+</head>
+<body>
+
+    <div class="SignUp-box">
+        <h2>📝Buat Akun</h2>
+        <form class="box">
+            <label for="username">Nama Pengguna</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="password">Kata Sandi</label>
+            <input type="password" id="password" name="password" required />
+
+            <label for="confirm-password">Konfirmasi Kata Sandi</label>
+            <input type="password" id="confirm-password" name="confirm-password" required />
+
+        <div class="game-options">
+            <p>Pilih Minat Game Kamu:</p>
+            <div class="checkbox-grid">
+                <label><input type="checkbox" name="game" value="ml">Mobile Legends</label>
+                <label><input type="checkbox" name="game" value="coc">Clash Of Clans</label>
+                <label><input type="checkbox" name="game" value="ff">Free Fire</label>
+                <label><input type="checkbox" name="game" value="Valo">Valorant</label>
+                <label><input type="checkbox" name="game" value="dl">Delta Force</label>
+                <label><input type="checkbox" name="game" value="pubg">PUBG</label>
+        </div>
+        <button type="submit" class="submit-btn">Sign Up</button>
+        <p class="login-link">Sudah punya akun? <a class="login" href="login.html">Login di sini</a></p>
+        </form>
+    </div>
+</body>
+</html>
