@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesan Sekarang</title>
+  <link rel="stylesheet" href="pesan.css">
+</head>
+<body>
+  <header>
+    <h1>🎮GameBuddy</h1>
+    <nav>
+      <a href="beranda.html">Beranda</a>
+      <a href="daftar.html">Daftar PS</a>
+      <a href="pesan.html">Pesan Sekarang</a>
+    </nav>
+  </header>
+    <div class="Formulir">
+      <h2>Formulir Pemesanan</h2>
+      <form id="form-pesan">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" required>
+
+        <label for="tipe">Pilih PS:</label>
+        <select id="tipe">
+          <option value="PS 2">PS 2</option>
+          <option value="PS 3">PS 3</option>
+          <option value="PS 4">PS 4</option>
+          <option value="PS 5">PS 5</option>
+        </select>
+
+        <label for="durasi">Durasi (jam):</label>
+        <input type="number" id="durasi" min="1" required>
+
+        <button type="submit">Pesan</button>
+      </form>
+      <div id="output"></div>
+    </div>
+
+  <footer>
+    <p>&copy; 2025 Rental PS</p>
+    <script src="script.js"></script>
+  </footer>
+</body>

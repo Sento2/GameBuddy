@@ -1,0 +1,166 @@
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #18122B 0%, #232D3F 100%);
+  color: #F5F5F5;
+  margin: 0;
+  min-height: 100vh;
+}
+
+header {
+ position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #362f5e;
+  box-shadow: 0 2px 12px rgba(0,255,202,0.05);
+  border-bottom: 2px solid #00FFCA;
+}
+
+header h1 {
+  font-size: 1.9em;
+  letter-spacing: 2px;
+  color: #00FFCA;
+  margin: 0 0 10px 0;
+  text-shadow: 0 0 12px #00FFCA33;
+}
+
+
+nav a {
+  background-color: #4a3b73;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+  white-space: nowrap;     
+  font-weight: bold;
+}
+
+nav a:hover, nav a.active {
+  background: #00FFCA;
+  color: #18122B;
+  order: 2px solid #635985;
+  box-shadow: 0 0 12px #00FFCA99;
+}
+
+h2 {
+  font-size: 2.4rem;
+  margin-left: 20px;
+  font-weight: 700;
+  color: #F5F5F5;
+} 
+
+
+.ps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.ps-card {
+  background: rgba(57, 48, 83, 0.96);
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px #18122B44;
+  border-left: 5px solid #00FFCA;
+  transition: box-shadow 0.2s;
+}
+
+.ps-card:hover{
+  box-shadow: 0 8px 32px #00FFCA33;
+}
+
+.ps-content {
+  padding: 25px;
+}
+
+.ps-image {
+  height: 300px;
+}
+
+.ps-image {
+  background-color: #1a1a2e; 
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.ps-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #F5F5F5;
+  
+}
+
+.ps-description {
+  color: #ffffff;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  
+}
+
+.Daftar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.daftar-card {
+  background: rgba(57, 48, 83, 0.95);
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px #18122B44;
+  border-left: 5px solid #00FFCA;
+  transition: box-shadow 0.2s;
+}
+
+.daftar-card:hover{
+  box-shadow: 0 8px 32px #00FFCA33;
+}
+
+.daftar-content {
+  padding: 25px;
+}
+
+.daftar-game {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #F5F5F5;
+  
+}
+
+footer {
+  background: rgba(57, 48, 83, 0.95);
+  text-align: center;
+  padding: 18px 0 12px 0;
+  color: #F5F5F5;
+  border-top: 2px solid #00FFCA;
+  margin-top: 40px;
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  nav a {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  main {
+    padding: 10px;
+  }
+}
