@@ -1,86 +1,546 @@
-
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(120deg, #18122B 0%, #232D3F 100%);
-  color: #F5F5F5;
+body, h1, h2, h3, p, nav, a, ul, li {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Latar belakang dinamis */
+body {
   min-height: 100vh;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: radial-gradient(circle at 50% 20%, #24243e 40%, #2e1437 100%);
+  color: #fff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* --- Efek Bintang --- */
+.stars {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+.star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle 2.5s infinite linear;
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0.7; transform: scale(1);}
+  50% { opacity: 1; transform: scale(1.5);}
+}
+
+/* --- Efek Partikel Warna-warni --- */
+.particles {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: 1; /* Di atas bintang, di bawah konten */
+  pointer-events: none;
+  overflow: hidden;
+}
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.7;
+  filter: blur(0.5px);
+  animation: float 14s linear infinite;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.2) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+.header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 0px 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #362f5e;
-  box-shadow: 0 2px 12px rgba(0,255,202,0.05);
-  border-bottom: 2px solid #00FFCA;
+  background: rgba(36,36,62,0.98);
+  padding: 24px 0 16px 0;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(44,44,90,0.18);
+  position: relative;
+  z-index: 2;
 }
 
 header h1 {
-  font-size: 1.9em;
+  font-size: 2.7rem;
+  letter-spacing: 1px;
+  color: #ffcb05;
+  text-shadow: 2px 4px 10px #1e143a;
+  margin-bottom: 8px;
+}
+
+.brand-text {
+  font-family: 'Segoe UI', Arial, sans-serif;
   letter-spacing: 2px;
-  color: #00FFCA;
-  margin: 0 0 10px 0;
-  text-shadow: 0 0 12px #00FFCA33;
 }
 
-h2 {
-  text-align: left;
-  font-size: 90px;
-}
-
-.container-gif {
-  width: 300px;      
-  height: auto;      
-  display: block;
-  margin: 0px 100px 20px auto; 
+nav {
+  margin: 10px 0 0 0;
 }
 
 nav a {
-  background-color: #4a3b73;
-  padding: 8px 16px;
-  border-radius: 20px;
+  color: #fff;
   text-decoration: none;
-  color: white;
-  white-space: nowrap;     
-  font-weight: bold;
+  margin: 0 18px;
+  font-size: 1.05rem;
+  padding: 8px 16px;
+  border-radius: 24px;
+  transition: background 0.25s, color 0.25s;
+  font-family: 'Segoe UI', sans-serif; /* Tambahkan baris ini */
+  font-weight: bold;                  /* Tambahkan baris ini */
+  background-color: #4a3b73;          /* Tambahkan baris ini agar sama */
 }
 
 nav a:hover, nav a.active {
   background: #00FFCA;
-  color: #18122B;
-  order: 2px solid #635985;
-  box-shadow: 0 0 12px #00FFCA99;
-  }
+  color: #24243e;
+  box-shadow: 0 2px 8px #00FFCA;
+}
 
-footer {
-  background: rgba(57, 48, 83, 0.95);
+main {
+  min-height: 60vh;
+}
+
+/* Hero Section */
+.landing-page {
+  margin: 48px auto 0 auto;
+  max-width: 520px;
+  background: rgba(36,36,62,0.93);
+  border-radius: 24px;
+  box-shadow: 0 6px 36px #2e1437bb;
+  padding: 36px 32px 32px 32px;
   text-align: center;
-  padding: 18px 0 12px 0;
-  color: #F5F5F5;
-  border-top: 2px solid #00FFCA;
-  margin-top: 40px;
-  font-size: 1em;
+  position: relative;
+  z-index: 2;
+}
+
+.container-gif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.icon {
+  border-radius: 50%;
+  background: #fff1;
+  box-shadow: 0 2px 16px #ffcb0533;
+  transition: transform 0.5s;
+}
+
+.icon:hover {
+  transform: scale(1.08) rotate(-6deg);
+}
+
+.landing-page h2 {
+  margin-top: 12px;
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  color: #ffcb05;
+  text-shadow: 1px 2px 6px #1e143a;
+}
+
+.landing-page p {
+  margin: 18px 0 0 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #f3f3f3;
+  text-shadow: 0 1px 6px #1e143a33;
+}
+
+.landing-page .highlight {
+  color: #ffcb05;
+  font-weight: bold;
   letter-spacing: 1px;
 }
 
+.decorative-icons {
+  margin-top: 24px;
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  opacity: 0.88;
+}
 
+/* Promo Section */
+.promo-section {
+  max-width: 520px;
+  margin: 36px auto 0 auto;
+  background: linear-gradient(90deg, #ffcb05 80%, #f56e00 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 18px #ffcb0599;
+  padding: 28px 32px;
+  position: relative;
+  text-align: left;
+  color: #1e143a;
+  z-index: 2;
+}
+
+.promo-section h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  text-shadow: 1px 2px 7px #fff9;
+}
+
+.promo-section ul {
+  margin: 0 0 0 22px;
+  font-size: 1.07rem;
+}
+
+.promo-section li {
+  margin-bottom: 7px;
+}
+
+.promo-badge {
+  position: absolute;
+  right: 24px;
+  top: -18px;
+  background: #f56e00;
+  color: #fff;
+  font-weight: bold;
+  padding: 7px 24px;
+  border-radius: 18px 18px 18px 0;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px #f56e0044;
+  letter-spacing: 2px;
+  z-index: 3;
+}
+
+.promo-date {
+  font-weight: bold;
+  color: #ea4c89;
+}
+
+/* Carousel Section (sekarang untuk rekomendasi game unggulan) */
+.carousel-section {
+  max-width: 900px;         /* Lebarkan agar card bisa muat */
+  margin: 44px auto 0 auto; /* Tengah otomatis */
+  padding: 0 10px;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+.carousel-section h3 {
+  margin-bottom: 24px;
+  font-size: 2rem;
+  color: #ffcb05;
+  letter-spacing: 1px;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: rgba(36,36,62,0.85);
+  border-radius: 18px;
+  box-shadow: 0 4px 16px #0002;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(.67,.11,.89,.58);
+}
+
+.carousel-item {
+  min-width: 100%;
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 0.7s, transform 0.7s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.carousel-item img {
+  border-radius: 12px;
+  height: 220px;
+  width: 150px;
+  object-fit: cover;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 14px #ffcb0555, 0 2px 8px #0006;
+}
+
+.carousel-caption {
+  font-size: 1.1rem;
+  color: #ffcb05;
+  background: rgba(36,36,62,0.88);
+  padding: 6px 22px;
+  border-radius: 14px;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background: #ffcb05cc;
+  color: #222;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #ffcb0555;
+  z-index: 99;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.carousel-btn:hover {
+  background: #f56e00cc;
+  color: #fff;
+  transform: scale(1.12);
+}
+.carousel-btn.prev { left: 8px; }
+.carousel-btn.next { right: 8px; }
+
+/* Testimoni Section */
+.testimoni-section {
+  max-width: 680px;
+  margin: 48px auto 0 auto;
+  padding: 0 10px 32px 10px;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+.testimoni-section h3 {
+  margin-bottom: 16px;
+  color: #ffcb05;
+  font-size: 1.13rem;
+  letter-spacing: 1px;
+}
+
+.testimoni-list {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimoni-card {
+  background: rgba(36,36,62,0.95);
+  border-radius: 16px;
+  padding: 22px 18px 14px 18px;
+  box-shadow: 0 3px 16px #0002, 0 2px 8px #ffcb0522;
+  max-width: 210px;
+  min-width: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: testimoniFadeIn 1.2s;
+  border: 2px solid #ffcb0544;
+}
+
+@keyframes testimoniFadeIn {
+  from { opacity: 0; transform: translateY(50px) scale(0.95);}
+  to { opacity: 1; transform: translateY(0) scale(1);}
+}
+
+.testimoni-card img {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  margin-bottom: 9px;
+  border: 2px solid #ffcb05;
+  box-shadow: 0 2px 8px #ffcb0555;
+  background: #fff;
+  object-fit: cover;
+}
+.testimoni-card strong {
+  color: #ffe066;
+  font-size: 1.08rem;
+  letter-spacing: 1px;
+}
+.testimoni-card p {
+  margin-top: 7px;
+  font-size: 0.97rem;
+  color: #fff;
+  font-style: italic;
+  text-shadow: 0 1px 7px #1e143a77;
+}
+
+.button-cta {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 12px 36px;
+  background: linear-gradient(90deg, #ffcb05 80%, #f56e00 100%);
+  color: #222;
+  font-size: 1.13rem;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 6px 18px #ffcb0555;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  letter-spacing: 1px;
+}
+
+.button-cta:hover {
+  background: linear-gradient(90deg, #ffe066 60%, #f56e00 100%);
+  color: #1e143a;
+  transform: scale(1.07);
+}
+
+footer {
+  margin-top: 48px;
+  text-align: center;
+  padding: 18px 0;
+  background: rgba(36,36,62,0.97);
+  border-top: 2px solid #ffcb05;
+  font-size: 1rem;
+  color: #ffcb05;
+  letter-spacing: 1px;
+}
+
+/* Grid Wario */
+.wario-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;  /* Ubah dari flex-start ke center */
+  margin-bottom: auto;
+}
+.wario-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px #ffcb0555, 0 2px 8px #0002;
+  min-width: 200px;
+  transition: box-shadow 0.2s, transform 0.2s;
+  border: 5px solid #ffcb05;
+  border-right-width: 7px;
+  border-bottom-width: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 18px;
+}
+.wario-card:hover {
+  box-shadow: 0 8px 32px #ffcb0599, 0 2px 8px #0004;
+  transform: translateY(-6px) scale(1.03);
+}
+.wario-img {
+  width: 100%;
+  aspect-ratio: 16/11;
+  background: #ffcb05;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wario-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.wario-meta {
+  color: #ff267e;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin: 16px 0 0 0;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+.wario-title {
+  text-align: center;
+  font-size: 1.13rem;
+  font-weight: bold;
+  color: #222;
+  margin: 10px 0 0 0;
+  line-height: 1.2;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.wario-author {
+  font-size: 0.95rem;
+  color: #222;
+  margin: 12px 0 0 0;
+  letter-spacing: 1px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  text-align: justify;
+  width: 90%;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .wario-grid { flex-direction: column; gap: 24px; align-items: center; }
+  .wario-card { width: 98vw; min-width: 0; }
+  .carousel-section { max-width: 99vw; }
+}
 @media (max-width: 600px) {
-  header h1 {
-    font-size: 1.2rem;
+  .landing-page, .promo-section, .carousel-section, .testimoni-section {
+    padding: 10px 4vw 18px 4vw;
+    max-width: 98vw;
   }
+  header h1 { font-size: 2rem;}
+  .landing-page h2 { font-size: 1.1rem;}
+  nav a { font-size: 0.98rem;}
+  .decorative-icons { font-size: 1.3rem; gap: 10px; }
+}
 
-  nav a {
-    display: block;
-    margin-bottom: 10px;
-  }
+/* Untuk .brand-text pada h1 dan span di h2 */
+.brand-text,
+span.brand-text,
+span.highlight,
+span.yellow {
+  color: #ffcb05 !important;
+}
 
-  main {
-    padding: 10px;
-  }
+/* Untuk .highlight pada landing-page */
+.highlight {
+  color: #ffcb05;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Untuk .section-title pada rekomendasi game unggulan */
+.section-title {
+  margin-bottom: 24px;
+  font-size: 2rem;
+  color: #ffcb05;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* Untuk footer teks kuning */
+footer .yellow,
+footer span.yellow,
+footer span[style*="color:#ffcb05"] {
+  color: #ffcb05 !important;
+}
+
+/* Untuk footer font size */
+footer .footer-small,
+footer span[style*="font-size:1em;"] {
+  font-size: 1em !important;
 }

@@ -7,28 +7,127 @@
   <link rel="stylesheet" href="beranda.css">
 </head>
 <body>
+  <!-- Efek bintang & partikel otomatis dari JS -->
   <header>
-    <h1>🎮GameBuddy</h1>
-    <nav>
-      <a href="beranda.html">Beranda</a>
-      <a href="daftar.html">Daftar PS</a>
-      <a href="pesan.html">Pesan Sekarang</a>
-    </nav>
-  </header>
-  <div class="landing-page">
-    <div class="container-gif"><img src="Ps Sticker by PlayStationArabia.gif" width="200" class="icon"></div>
-      <h2>Selamat datang di GameBuddy!</h2>
-      <p>Sewa PS favoritmu dengan mudah dan cepat.Nikmati pengalaman bermain game terbaik dengan menyewa PlayStation favoritmu secara mudah dan cepat. Kami menyediakan berbagai pilihan konsol seperti PS4 dan PS5 dengan harga terjangkau dan pelayanan terbaik. 
-      Pesan sekarang dan mainkan kapan saja!</p>
+    <div class="header-inner">
+      <h1>🎮 <span class="brand-text">GameBuddy</span></h1>
+      <nav>
+        <a href="beranda.html">Beranda</a>
+        <a href="daftar.html">Daftar PS</a>
+        <a href="pesan.html">Pesan Sekarang</a>
+      </nav>
     </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="landing-page">
+      <div class="container-gif">
+        <img src="Ps Sticker by PlayStationArabia.gif" width="170" class="icon" alt="GameBuddy Mascot">
+      </div>
+      <h2>Selamat datang di <span class="yellow">GameBuddy</span>!</h2>
+      <p>
+        Sewa PS favoritmu dengan mudah dan cepat.<br>
+        Nikmati pengalaman bermain game terbaik dengan menyewa <b>PlayStation</b> favoritmu secara mudah dan cepat.<br>
+        Kami menyediakan berbagai pilihan konsol seperti <b>PS3, PS4, PS5</b> dan <b>aksesoris lengkap</b>.<br>
+        <span class="highlight">Pesan sekarang dan mainkan kapan saja!</span>
+      </p>
+      <div class="decorative-icons">
+        <span title="Wireless Controller">🎮</span>
+        <span title="Game Disc">💿</span>
+        <span title="Star">⭐</span>
+        <span title="Rocket">🚀</span>
+      </div>
+    </section>
+
+    <!-- Section Promo -->
+    <section class="promo-section">
+      <div class="promo-content">
+        <h3>🔥 PROMO SPESIAL BULAN INI 🔥</h3>
+        <ul>
+          <li><b>Diskon 30%</b> untuk sewa PS selama 1 minggu!</li>
+          <li><b>Gratis 1 game</b> untuk setiap pemesanan PS5!</li>
+          <li>Promo berlaku hingga <span class="promo-date">30 Juni 2025</span></li>
+        </ul>
+        <div class="promo-badge">PROMO</div>
+      </div>
+    </section>
+
+    <!-- Section Carousel -->
+    <section class="carousel-section">
+      <h3 class="section-title">
+        Rekomendasi Game Unggulan
+      </h3>
+      <div class="wario-grid">
+        <div class="wario-card">
+          <div class="wario-img">
+            <img src="https://assets-prd.ignimgs.com/2022/01/07/god-of-war-2-button-1641590949211.jpg" alt="God of War">
+          </div>
+          <div class="wario-meta">GAME UNGGULAN</div>
+          <div class="wario-title">God of War</div>
+          <div class="wario-author">Aksi epik, grafis memukau, dan cerita legendaris.</div>
+        </div>
+        <div class="wario-card">
+          <div class="wario-img">
+            <img src="https://th.bing.com/th/id/OIP.kJQ6kEPduAE0YSggEgUSygHaEK?w=282&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="FIFA 23">
+          </div>
+          <div class="wario-meta">GAME UNGGULAN</div>
+          <div class="wario-title">FIFA 23</div>
+          <div class="wario-author">Rasakan sensasi sepak bola paling realistis!</div>
+        </div>
+        <div class="wario-card">
+          <div class="wario-img">
+            <img src="https://th.bing.com/th/id/OIP.1LLLjuKWWppztiChRZF-KgHaEK?w=300&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="GTA V">
+          </div>
+          <div class="wario-meta">GAME UNGGULAN</div>
+          <div class="wario-title">GTA V</div>
+          <div class="wario-author">Kebebasan beraksi di dunia terbuka yang luas.</div>
+        </div>
+        <div class="wario-card">
+          <div class="wario-img">
+            <img src="https://images.tokopedia.net/img/cache/500-square/VqbcmM/2023/4/5/09b9df13-aa80-4bc6-b4d3-d745891dad46.jpg" alt="Resident Evil 4 Remake">
+          </div>
+          <div class="wario-meta">GAME UNGGULAN</div>
+          <div class="wario-title">Resident Evil 4 Remake</div>
+          <div class="wario-author">Survival horror klasik dengan nuansa modern.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Testimoni -->
+    <section class="testimoni-section">
+      <h3>💬 Testimoni Pelanggan</h3>
+      <div class="testimoni-list">
+        <div class="testimoni-card">
+          <img src="https://th.bing.com/th/id/OIP.Q11zY3AiKAv7X6u8RDMGdAHaKX?w=184&h=257&c=7&r=0&o=7&pid=1.7&rm=3" alt="User1">
+          <div>
+            <strong>Kalandra.</strong>
+            <p>"Pelayanan cepat, PS bersih dan banyak pilihan game baru! Anak-anak saya senang banget."</p>
+          </div>
+        </div>
+        <div class="testimoni-card">
+          <img src="https://th.bing.com/th/id/OIP.RmQy_xC6ILZCoDySVvboQwHaLH?w=184&h=276&c=7&r=0&o=7&pid=1.7&rm=3" alt="User2">
+          <div>
+            <strong>Raditya.</strong>
+            <p>"Promo-nya selalu menarik, admin ramah dan responsif. Pasti langganan terus!"</p>
+          </div>
+        </div>
+        <div class="testimoni-card">
+          <img src="https://th.bing.com/th/id/OIP.1vR4aZDoWI9zds7XMREgZAHaJ4?w=184&h=245&c=7&r=0&o=7&pid=1.7&rm=3">
+          <div>
+            <strong>Rizky Pratama.</strong>
+            <p>"Proses sewa gampang, PS bisa diantar ke rumah. Sangat direkomendasikan!"</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Rental PS</p>
+    <p>
+      &copy; 2025 <span class="yellow">Rental PS GameBuddy</span> &mdash; <span class="footer-small">Bermain Lebih Dekat!</span>
+    </p>
   </footer>
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
