@@ -8,39 +8,67 @@
 </head>
 <body>
   <header>
-    <h1>🎮GameBuddy</h1>
+  <h1>🎮GameBuddy</h1>
     <nav>
-      <a href="beranda.html">Beranda</a>
-      <a href="daftar.html">Daftar PS</a>
-      <a href="pesan.html">Pesan Sekarang</a>
+        <a href="beranda.html">Beranda</a>
+        <a href="daftar.html">Daftar PS</a>
+        <a href="pesan.html">Pesan Sekarang</a>
     </nav>
-  </header>
+    </header>
+
     <div class="Form-grid">
       <div class="form-card">
-        <h2>Formulir Pemesanan</h2>
-      <form>
-        <label for="nama">Nama:</label>
-        <input type="text" id="nama" required>
+          <h2>Formulir Pemesanan</h2>
+            
+          <div class="price-info">
+              <h3>💰 Daftar Harga per Jam</h3>
+              <ul class="price-list">
+                  <li>🎮 PS 2: Rp 5.000/jam</li>
+                  <li>🎮 PS 3: Rp 8.000/jam</li>
+                  <li>🎮 PS 4: Rp 12.000/jam</li>
+                  <li>🎮 PS 5: Rp 15.000/jam</li>
+               </ul>
+          </div>
 
-        <label for="tipe">Pilih PS:</label>
-        <select id="tipe">
-          <option value="PS 2">PS 2</option>
-          <option value="PS 3">PS 3</option>
-          <option value="PS 4">PS 4</option>
-          <option value="PS 5">PS 5</option>
-        </select>
+          <form id="orderForm">
+              <label for="nama">Nama Lengkap:</label>
+              <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap Anda" required>
 
-        <label for="durasi">Durasi (jam):</label>
-        <input type="number" id="durasi" min="1" required>
+              <label for="telepon">Nomor Telepon:</label>
+              <input type="tel" id="telepon" name="telepon" placeholder="08xxxxxxxxxx" required>
 
-        <button type="submit">Pesan</button>
-      </form>
-      <div id="output"></div>
+              <label for="tipe">Pilih PlayStation:</label>
+              <select id="tipe" name="tipe" required>
+                  <option value="">-- Pilih Tipe PS --</option>
+                  <option value="PS 2">PS 2 - Rp 5.000/jam</option>
+                  <option value="PS 3">PS 3 - Rp 10.000/jam</option>
+                  <option value="PS 4">PS 4 - Rp 20.000/jam</option>
+                  <option value="PS 5">PS 5 - Rp 30.000/jam</option>
+              </select>
+
+              <label for="durasi">Durasi Bermain (jam):</label>
+              <input type="number" id="durasi" name="durasi" min="1" max="12" placeholder="Masukkan durasi dalam jam" required>
+
+              <label for="tanggal">Tanggal Bermain:</label>
+              <input type="date" id="tanggal" name="tanggal" required>
+
+              <label for="waktu">Waktu Mulai:</label>
+              <input type="time" id="waktu" name="waktu" required>
+
+              <label for="catatan">Catatan Tambahan (Opsional):</label>
+              <input type="text" id="catatan" name="catatan" placeholder="Permintaan khusus atau catatan lainnya">
+
+              <button type="submit">🎮 Pesan Sekarang</button>
+          </form>
+
+          <div id="output"></div>
       </div>
-    </div>
+  </div>
 
   <footer>
-    <p>&copy; 2025 Rental PS</p>
-    <script src="script.js"></script>
+    <p>
+      &copy; 2025 <span class="yellow">Rental PS GameBuddy</span> &mdash; <span class="footer-small">Bermain Lebih Dekat!</span>
+    </p>
   </footer>
+  <script src="script.js"></script>
 </body>

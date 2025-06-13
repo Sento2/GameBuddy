@@ -1,21 +1,14 @@
 
 body {
-  min-height: 100vh;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   background: radial-gradient(circle at 50% 20%, #24243e 40%, #2e1437 100%);
   color: #fff;
-  position: relative;
-  overflow-x: hidden;
-}
-
-.header-inner {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 24px;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 header {
-  background: rgba(36,36,62,0.98);
+ background: rgba(36,36,62,0.98);
   padding: 24px 0 16px 0;
   text-align: center;
   box-shadow: 0 4px 12px rgba(44,44,90,0.18);
@@ -30,8 +23,6 @@ header h1 {
   text-shadow: 2px 4px 10px #1e143a;
   margin-bottom: 8px;
 }
-
-
 
 nav {
   margin: 10px 0 0 0;
@@ -65,133 +56,117 @@ h2 {
   margin-bottom: 8px;
 } 
 
+.section-title {
+  font-size: 1.5rem;
+  color: #ffd700;
+  margin-bottom: 30px;
+  text-align: left;
+  padding-left: 20px;
+}
 
 .ps-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
-  padding: 20px;
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .ps-card {
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 4px 18px #ffcb0555, 0 2px 8px #0002;
-  min-width: 200px;
-  transition: box-shadow 0.2s, transform 0.2s;
-  border: 5px solid #ffcb05;
-  border-right-width: 7px;
-  border-bottom-width: 7px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 18px;
+  background: #ffd700;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .ps-card:hover{
-  box-shadow: 0 8px 32px #ffcb0599, 0 2px 8px #0004;
-  transform: translateY(-6px) scale(1.03);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(255, 215, 0, 0.3);
 }
 
 .ps-content {
-  padding: 25px;
+  color: #1a1a2e;
+}
+
+.ps-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .ps-image {
-  height: 300px;
-}
-
-.ps-image {
-  width: 100%;
-  aspect-ratio: 16/11;
-  background: #ffcb05;
-  border-radius: 12px 12px 0 0;
-  overflow: hidden;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 15px;
+  background: rgba(0,0,0,0.05);
+  border-radius: 10px;
 }
 
 .ps-name {
-  text-align: center;
-  font-size: 1.13rem;
+  font-size: 1.3rem;
   font-weight: bold;
-  color: #222;
-  margin: 10px 0 0 0;
-  line-height: 1.2;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  margin-bottom: 12px;
+  color: #1a1a2e;
   
 }
 
 .ps-description {
-  font-size: 0.90rem;
-  color: #222;
-  margin: 12px 0 0 0;
-  letter-spacing: 1px;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 15px;
   text-align: justify;
-  width: 90%;
-  
+  color: #333;
 }
 
-.Daftar-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.daftar-card {
-  background: rgba(57, 48, 83, 0.95);
+.ps-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #d32f2f;
+  background: rgba(211, 47, 47, 0.1);
+  padding: 8px 12px;
   border-radius: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  overflow: hidden;
-  box-shadow: 0 4px 24px #18122B44;
-  border-left: 5px solid #00FFCA;
-  transition: box-shadow 0.2s;
+  display: inline-block;
 }
 
-.daftar-card:hover{
-  box-shadow: 0 8px 32px #00FFCA33;
-}
 
-.daftar-content {
-  padding: 25px;
-}
-
-.daftar-game {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #F5F5F5;
-  
-}
 
 footer {
-  background: rgba(57, 48, 83, 0.95);
-  text-align: center;
-  padding: 18px 0 12px 0;
-  color: #F5F5F5;
-  border-top: 2px solid #00FFCA;
   margin-top: 40px;
-  font-size: 1em;
+  text-align: center;
+  padding: 18px 0;
+  border-top: 2px solid #ffcb05;
+  font-size: 1rem;
+  color: #ffcb05;
   letter-spacing: 1px;
 }
 
-
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 1.2rem;
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
   }
-
-  nav a {
-    display: block;
-    margin-bottom: 10px;
+      
+  .nav-buttons {
+    flex-direction: column;
+    align-items: center;
   }
-
-  main {
-    padding: 10px;
+      
+  .nav-btn {
+    width: 200px;
+    text-align: center;
+  }
+      
+  .ps-grid {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+      
+  .section-title {
+    text-align: center;
+    padding-left: 0;
   }
 }

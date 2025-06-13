@@ -4,7 +4,7 @@ body, h1, h2, h3, p, nav, a, ul, li {
   box-sizing: border-box;
 }
 
-/* Latar belakang dinamis */
+
 body {
   min-height: 100vh;
   font-family: 'Segoe UI', Arial, sans-serif;
@@ -14,7 +14,7 @@ body {
   overflow-x: hidden;
 }
 
-/* --- Efek Bintang --- */
+
 .stars {
   position: fixed;
   top: 0; left: 0; width: 100vw; height: 100vh;
@@ -35,11 +35,11 @@ body {
   50% { opacity: 1; transform: scale(1.5);}
 }
 
-/* --- Efek Partikel Warna-warni --- */
+
 .particles {
   position: fixed;
   top: 0; left: 0; width: 100vw; height: 100vh;
-  z-index: 1; /* Di atas bintang, di bawah konten */
+  z-index: 1; 
   pointer-events: none;
   overflow: hidden;
 }
@@ -119,7 +119,7 @@ main {
   min-height: 60vh;
 }
 
-/* Hero Section */
+
 .landing-page {
   margin: 48px auto 0 auto;
   max-width: 520px;
@@ -231,10 +231,10 @@ main {
   color: #ea4c89;
 }
 
-/* Carousel Section (sekarang untuk rekomendasi game unggulan) */
+
 .carousel-section {
-  max-width: 900px;         /* Lebarkan agar card bisa muat */
-  margin: 44px auto 0 auto; /* Tengah otomatis */
+  max-width: 900px;         
+  margin: 44px auto 0 auto; 
   padding: 0 10px;
   text-align: center;
   z-index: 2;
@@ -422,7 +422,7 @@ footer {
   letter-spacing: 1px;
 }
 
-/* Grid Wario */
+
 .wario-grid {
   display: flex;
   gap: 30px;
@@ -507,7 +507,7 @@ footer {
   .decorative-icons { font-size: 1.3rem; gap: 10px; }
 }
 
-/* Untuk .brand-text pada h1 dan span di h2 */
+
 .brand-text,
 span.brand-text,
 span.highlight,
@@ -515,14 +515,14 @@ span.yellow {
   color: #ffcb05 !important;
 }
 
-/* Untuk .highlight pada landing-page */
+
 .highlight {
   color: #ffcb05;
   font-weight: bold;
   letter-spacing: 1px;
 }
 
-/* Untuk .section-title pada rekomendasi game unggulan */
+
 .section-title {
   margin-bottom: 24px;
   font-size: 2rem;
@@ -531,14 +531,14 @@ span.yellow {
   text-align: center;
 }
 
-/* Untuk footer teks kuning */
+
 footer .yellow,
 footer span.yellow,
 footer span[style*="color:#ffcb05"] {
   color: #ffcb05 !important;
 }
 
-/* Untuk footer font size */
+
 footer .footer-small,
 footer span[style*="font-size:1em;"] {
   font-size: 1em !important;
