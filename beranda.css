@@ -426,7 +426,7 @@ footer {
 .wario-grid {
   display: flex;
   gap: 30px;
-  justify-content: center;  /* Ubah dari flex-start ke center */
+  justify-content: center;  
   margin-bottom: auto;
 }
 .wario-card {
@@ -488,10 +488,9 @@ footer {
   letter-spacing: 1px;
   font-family: 'Segoe UI', Arial, sans-serif;
   text-align: justify;
-  width: 90%;
+  text-justify: inter-word;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   .wario-grid { flex-direction: column; gap: 24px; align-items: center; }
   .wario-card { width: 98vw; min-width: 0; }
