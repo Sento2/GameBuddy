@@ -104,9 +104,9 @@ nav a {
   padding: 8px 16px;
   border-radius: 24px;
   transition: background 0.25s, color 0.25s;
-  font-family: 'Segoe UI', sans-serif; /* Tambahkan baris ini */
-  font-weight: bold;                  /* Tambahkan baris ini */
-  background-color: #4a3b73;          /* Tambahkan baris ini agar sama */
+  font-family: 'Segoe UI', sans-serif; 
+  font-weight: bold;                  
+  background-color: #4a3b73;         
 }
 
 nav a:hover, nav a.active {
@@ -181,7 +181,7 @@ main {
   opacity: 0.88;
 }
 
-/* Promo Section */
+
 .promo-section {
   max-width: 520px;
   margin: 36px auto 0 auto;
